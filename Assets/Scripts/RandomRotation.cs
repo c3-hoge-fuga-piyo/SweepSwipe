@@ -8,18 +8,18 @@ namespace OhanaYa.SweepSwipe
         void Awake()
         {
             this.axis = Random.onUnitSphere;
-            this.andlePerSecond = 360.0f * Random.Range(0.1f, 2.0f);
+            this.anglePerSecond = 360.0f * Random.Range(0.1f, 2.0f);
         }
 
         void Update()
         {
             this.transform.Rotate(
                 this.axis,
-                this.andlePerSecond * Time.deltaTime);
+                this.anglePerSecond * Time.deltaTime);
         }
         #endregion
 
         Vector3 axis;
-        float andlePerSecond;
+        float anglePerSecond;
     }
 }
